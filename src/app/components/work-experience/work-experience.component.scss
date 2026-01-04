@@ -165,6 +165,16 @@ $bg: var(--bg-card);
 
 .tech { display: flex; flex-wrap: wrap; gap: 8px; .tech-chip { display: inline-block; padding: 6px 12px; font-size: 0.8rem; border-radius: 999px; background: rgba(30,60,114,0.08); color: lighten($accent, 2%); border: 1px solid rgba(30,60,114,0.06); transition: transform 120ms ease, box-shadow 120ms ease; &:hover { transform: translateY(-3px) rotate(-0.5deg); box-shadow: 0 8px 20px rgba(2,6,23,0.35); } &:focus { outline: 2px solid rgba(56,189,248,0.18); outline-offset: 3px; transform: translateY(-4px); } } }
 
+  /* built-with badge */
+  .built-with { margin-top: 18px; display: flex; justify-content: center; }
+  .built-pill { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.02); padding: 8px 12px; border-radius: 999px; box-shadow: 0 8px 24px rgba(2,6,23,0.25); }
+  .built-label { font-size: 0.9rem; color: $muted; font-weight: 600; }
+  .built-icons { display: inline-flex; gap: 8px; align-items: center; }
+  .built-icon { font-size: 1.15rem; width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; }
+  .built-icon.angular { color: #dd0031; }
+  .built-icon.ionic { color: $accent; }
+  .built-link { color: $accent; text-decoration: none; font-weight: 700; padding-left: 6px; }
+  .built-link:hover { color: lighten($accent, 6%); text-decoration: underline; }
 @media (max-width: 900px) {
   .experience-wrapper { padding: 48px 16px; }
   .section-title { font-size: 1.9rem; }
