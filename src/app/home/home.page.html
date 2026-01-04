@@ -54,16 +54,16 @@
     <section class="skills">
       <div class="container">
         <h2>Skills & Technologies</h2>
-        <div class="skill-list">
-          <div class="skill-item">Angular</div>
-          <div class="skill-item">TypeScript</div>
-          <div class="skill-item">NgRx</div>
-          <div class="skill-item">RxJS</div>
-          <div class="skill-item">Ionic</div>
-          <div class="skill-item">HTML & CSS</div>
-          <div class="skill-item">Testing (Jasmine/Karma)</div>
-          <div class="skill-item">REST APIs</div>
+
+        <div class="skill-groups">
+          <div class="skill-group" *ngFor="let group of groups">
+            <h3 class="group-title">{{ group.title }}</h3>
+            <div class="skill-list">
+              <div class="skill-item" *ngFor="let skill of group.skills">{{ skill }}</div>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
 
