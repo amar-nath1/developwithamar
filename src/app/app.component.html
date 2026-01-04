@@ -1,3 +1,43 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+
+<ion-header>
+  <ion-toolbar>
+    <!-- Hamburger visible on small screens -->
+    <ion-buttons slot="start" class="hamburger-wrap">
+      <ion-button class="hamburger" (click)="toggleMenu()" aria-label="Toggle navigation menu" title="Menu">
+        <!-- simple hamburger icon -->
+        <span class="hamburger-icon" aria-hidden="true">☰</span>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title slot="start" class="brand-title">
+      <span class="brand-name">Amar Nath </span>
+      <span class="show-title" [class.animate-in]="animateIn" [class.animate-out]="animateOut" aria-live="polite"> ({{ showTitle }})</span>
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button 
+        *ngFor="let page of pages" 
+        [routerLink]="page.url" 
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }">
+        {{ page.title }}
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Mobile menu overlay -->
+<nav class="mobile-menu" *ngIf="isMenuOpen" role="navigation" aria-label="Main menu">
+  <div class="mobile-menu-inner">
+    <button class="mobile-close" (click)="toggleMenu()" aria-label="Close menu">✕</button>
+    <ul>
+      <li *ngFor="let page of pages" (click)="navigate(page.url)">
+        <a [routerLink]="page.url">{{ page.title }}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+

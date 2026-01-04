@@ -1,0 +1,45 @@
+<section class="experience-wrapper" aria-labelledby="work-experience-title">
+  <div class="section-header">
+    <h2 id="work-experience-title" class="section-title">Work Experience</h2>
+    <p class="section-subtitle">Selected roles delivering result-driven front-end solutions.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="experience-card" *ngFor="let exp of experiences; let i = index; trackBy: trackByExperience" [style.animationDelay]="(i * 80) + 'ms'">
+      <!-- <div class="timeline-dot" aria-hidden="true"></div> -->
+
+      <div class="card-content" role="article" [attr.aria-label]="exp.role + ' at ' + exp.company">
+        <div class="card-head">
+          <div class="company-meta">
+            <ng-container *ngIf="exp.logo; else initials">
+              <!-- <img class="company-logo" [src]="exp.logo" [alt]="exp.company + ' logo'" /> -->
+            </ng-container>
+            <ng-template #initials>
+              <div class="company-logo company-initials" aria-hidden="true">{{ exp.company.charAt(0) }}</div>
+            </ng-template>
+
+            <div class="company-info">
+              <h3 class="role"><span class="role-gradient">{{ exp.role }}</span></h3>
+              <h4 class="company">{{ exp.company }}</h4>
+            </div>
+          </div>
+
+          <div class="meta-right">
+            <span class="period">{{ exp.duration }}</span>
+            <span *ngIf="exp.duration?.includes('Present')" class="badge" aria-hidden="true">Current</span>
+          </div>
+        </div>
+
+        <p class="summary">{{ exp.summary }}</p>
+
+        <ul class="highlights">
+          <li *ngFor="let point of exp.highlights">{{ point }}</li>
+        </ul>
+
+        <div class="tech">
+          <span class="tech-chip" *ngFor="let tech of exp.techStack" [title]="tech" tabindex="0">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

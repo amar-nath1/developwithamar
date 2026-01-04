@@ -1,20 +1,72 @@
-<ion-header [translucent]="true">
+<!-- src/app/pages/home/home.page.html -->
+<!-- <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content fullscreen>
+  <div class="home-page">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1>Hi, I'm <span class="name-highlight">Amar Nath</span></h1>
+          <p class="subtitle">Angular Developer • Web Enthusiast</p>
+          <p class="hero-description">I build performant, accessible, and maintainable web apps using modern Angular, RxJS and TypeScript. I help teams ship robust features with great UX.</p>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+          <div class="cta-row">
+            <button class="cta-primary" routerLink="/projects" aria-label="View my work">View My Work</button>
+            <a class="cta-ghost" routerLink="/contact" aria-label="Contact me">Contact</a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-item"><strong>4+</strong> years experience</div>
+            <div class="meta-item"><strong>Enterprise</strong> Angular apps</div>
+            <div class="meta-item"><strong>Available</strong> for new projects</div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-hidden="true">
+          <!-- <div class="avatar"><img src="../../assets/amar-photo.png" alt=""></div> -->
+          <div class="card-body">
+            <h3>Frontend Engineer</h3>
+            <p>Focused on performance, testability, and developer DX.</p>
+            <a class="contact-link" routerLink="/contact" aria-label="Get in touch">Let's talk</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          Angular Frontend Developer with 4 years of experience building enterprise-grade web and hybrid
+          applications using Angular (16+), RxJS, NgRx and TypeScript. Experienced in REST API integration,
+          unit testing with Jasmine & Karma, and performance optimization. I enjoy crafting UI that feels fast and intuitive.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+      <div class="container">
+        <h2>Skills & Technologies</h2>
+        <div class="skill-list">
+          <div class="skill-item">Angular</div>
+          <div class="skill-item">TypeScript</div>
+          <div class="skill-item">NgRx</div>
+          <div class="skill-item">RxJS</div>
+          <div class="skill-item">Ionic</div>
+          <div class="skill-item">HTML & CSS</div>
+          <div class="skill-item">Testing (Jasmine/Karma)</div>
+          <div class="skill-item">REST APIs</div>
+        </div>
+      </div>
+    </section>
+
+    <app-work-experience></app-work-experience>
   </div>
 </ion-content>

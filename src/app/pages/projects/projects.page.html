@@ -1,0 +1,25 @@
+<!-- src/app/pages/projects/projects.page.html -->
+
+
+<ion-content fullscreen>
+  <div class="projects-page">
+    <section class="projects-header">
+      <h1>My Projects</h1>
+      <p>Here are some of the Angular projects I've worked on:</p>
+    </section>
+
+    <section class="project-list">
+      <ion-card *ngFor="let project of projects">
+        <!-- <img [src]="project.image" alt="{{ project.title }} Screenshot"> -->
+        <ion-card-header>
+          <ion-card-title>{{ project.title }}</ion-card-title>
+          <ion-card-subtitle>{{ project.subtitle }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ project.description }}</p>
+          <ion-button *ngIf="project.link" fill="clear" href="{{ project.link }}" target="_blank">View Project</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </section>
+  </div>
+</ion-content>

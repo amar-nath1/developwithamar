@@ -1,0 +1,68 @@
+/* src/app/pages/contact/contact.page.scss */
+
+.contact-page {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+  
+    .contact-header {
+      text-align: center;
+      padding: 40px 0;
+  
+      h1 {
+        font-size: 2.5rem;
+        color: #1e3c72;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        color: #666;
+      }
+    }
+  
+    .contact-form {
+      margin-top: 30px;
+  
+      ion-item {
+        margin-bottom: 20px;
+      }
+  
+      ion-button {
+        --background: #1e3c72;
+        --background-hover: #2a5298;
+        --color: #fff;
+        font-size: 1rem;
+        padding: 10px 20px;
+        text-transform: uppercase;
+      }
+    }
+  
+    .contact-info {
+      margin-top: 50px;
+      text-align: center;
+  
+      h2 {
+        font-size: 2rem;
+        color: #1e3c72;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 10px;
+  
+        a {
+          color: #1e3c72;
+          text-decoration: none;
+          border-bottom: 1px solid transparent;
+          transition: border-color 0.3s;
+  
+          &:hover {
+            border-color: #1e3c72;
+          }
+        }
+      }
+    }
+  }
+  
