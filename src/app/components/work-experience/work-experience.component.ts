@@ -12,7 +12,7 @@ export class WorkExperienceComponent {
       role: 'Software Developer',
       company: 'Coding Nebula',
       logo: 'assets/icon/company-enterprise.svg',
-      duration: 'Apr 2023 – 30 Nov 2025',
+      duration: 'Mar 2023 – Nov 2025',
       summary: 'Working on enterprise-grade Angular applications for a global client, focusing on scalability, performance, and maintainability.',
       highlights: [
         'Developed transaction monitoring and payment tracking dashboards handling high-volume data.',
