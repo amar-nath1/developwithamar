@@ -17,6 +17,7 @@ export class AppComponent {
     { title: 'Projects', url: '/projects' },
     // { title: 'About', url: '/about' },
     { title: 'Contact', url: '/contact' },
+    { title: 'Playground', url: '/playground' },
   ];
   public isMenuOpen: boolean = false;
 
